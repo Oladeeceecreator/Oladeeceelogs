@@ -1,0 +1,1664 @@
+<!-- COVER PAGE -->
+
+<section class="cover-page" id="home">
+
+    <div class="cover-content">
+
+        <div class="cover-logo">
+            <span>OD</span>
+        </div>
+
+        <p class="welcome">WELCOME TO</p>
+
+        <h1>OLA DEECEE LOGS</h1>
+
+        <div class="cover-line"></div>
+
+        <p class="cover-text">
+            Your trusted digital service marketplace
+        </p>
+
+        <div class="cover-buttons">
+
+            <a href="#marketplace" class="btn">
+                Explore Marketplace
+            </a>
+
+            <a href="#services" class="btn btn-outline">
+                View Services
+            </a>
+
+        </div>
+
+        <div class="cover-features">
+            <span>⚡ Fast Response</span>
+            <span>💎 Quality Service</span>
+            <span>🤝 Customer Support</span>
+        </div>
+
+    </div>
+
+</section>
+
+<style>
+
+.cover-page{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:100px 20px 50px;
+
+    background:
+        radial-gradient(circle at 50% 20%, #064d88 0%, transparent 35%),
+        linear-gradient(135deg, #020611, #06152c, #020611);
+
+    position:relative;
+    overflow:hidden;
+}
+
+.cover-page::before{
+    content:"";
+    position:absolute;
+    width:350px;
+    height:350px;
+    border:1px solid rgba(0,198,255,.2);
+    border-radius:50%;
+    animation:rotateCircle 12s linear infinite;
+}
+
+.cover-content{
+    position:relative;
+    z-index:2;
+    max-width:850px;
+}
+
+.cover-logo{
+    width:90px;
+    height:90px;
+    margin:0 auto 25px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border:2px solid #00c6ff;
+    border-radius:50%;
+
+    background:#071a35;
+
+    box-shadow:
+        0 0 20px rgba(0,198,255,.4),
+        0 0 60px rgba(0,119,255,.2);
+}
+
+.cover-logo span{
+    font-size:25px;
+    font-weight:bold;
+    color:#00c6ff;
+}
+
+.welcome{
+    color:#00c6ff;
+    font-size:14px;
+    letter-spacing:5px;
+    margin-bottom:15px;
+}
+
+.cover-page h1{
+    font-size:58px;
+    font-weight:bold;
+
+    background:linear-gradient(
+        90deg,
+        #00c6ff,
+        white,
+        #00c6ff
+    );
+
+    -webkit-background-clip:text;
+    color:transparent;
+
+    animation:coverGlow 3s ease-in-out infinite alternate;
+}
+
+.cover-line{
+    width:100px;
+    height:3px;
+    background:#00c6ff;
+    margin:20px auto;
+    border-radius:10px;
+    box-shadow:0 0 15px #00c6ff;
+}
+
+.cover-text{
+    color:#b9c4d8;
+    font-size:18px;
+    margin-bottom:30px;
+}
+
+.cover-buttons{
+    margin-bottom:30px;
+}
+
+.cover-features{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:10px;
+}
+
+.cover-features span{
+    padding:9px 14px;
+    border:1px solid #1d426d;
+    border-radius:20px;
+    background:rgba(8,26,50,.8);
+    color:#b9c4d8;
+    font-size:12px;
+}
+
+@keyframes coverGlow{
+
+    from{
+        text-shadow:0 0 5px #00c6ff;
+    }
+
+    to{
+        text-shadow:
+            0 0 15px #00c6ff,
+            0 0 30px #0077ff;
+    }
+
+}
+
+@keyframes rotateCircle{
+
+    from{
+        transform:rotate(0deg);
+    }
+
+    to{
+        transform:rotate(360deg);
+    }
+
+}
+
+@media(max-width:600px){
+
+    .cover-page h1{
+        font-size:39px;
+    }
+
+    .cover-text{
+        font-size:16px;
+    }
+
+}
+
+</style></section><!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>OLA DEECEE LOGS</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#050b18;
+    color:white;
+}
+
+/* HEADER */
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    padding:18px 7%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:rgba(5,11,24,.92);
+    backdrop-filter:blur(10px);
+    z-index:1000;
+    border-bottom:1px solid #16264a;
+}
+
+.logo{
+    font-size:22px;
+    font-weight:bold;
+    color:#00c6ff;
+    letter-spacing:1px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:20px;
+    font-size:14px;
+}
+
+nav a:hover{
+    color:#00c6ff;
+}
+
+/* HERO */
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:120px 20px 70px;
+    background:
+    radial-gradient(circle at top,#063d72 0,#050b18 45%);
+}
+
+.hero-content{
+    max-width:850px;
+}
+
+.badge{
+    display:inline-block;
+    padding:8px 18px;
+    border:1px solid #00c6ff;
+    border-radius:30px;
+    color:#00c6ff;
+    margin-bottom:20px;
+    font-size:13px;
+}
+
+.hero h1{
+    font-size:55px;
+    margin-bottom:15px;
+    background:linear-gradient(90deg,#00c6ff,#ffffff,#00c6ff);
+    -webkit-background-clip:text;
+    color:transparent;
+}
+
+.hero h2{
+    font-size:24px;
+    margin-bottom:20px;
+}
+
+.hero p{
+    color:#b9c4d8;
+    line-height:1.8;
+    font-size:16px;
+    margin-bottom:30px;
+}
+
+.btn{
+    display:inline-block;
+    padding:14px 25px;
+    margin:5px;
+    border-radius:30px;
+    text-decoration:none;
+    font-weight:bold;
+    color:white;
+    background:#0077ff;
+    box-shadow:0 0 20px rgba(0,119,255,.35);
+    transition:.3s;
+}
+
+.btn:hover{
+    transform:translateY(-4px);
+    box-shadow:0 0 30px rgba(0,198,255,.6);
+}
+
+.btn-outline{
+    background:transparent;
+    border:1px solid #00c6ff;
+}
+
+/* SECTIONS */
+section{
+    padding:90px 7%;
+}
+
+.title{
+    text-align:center;
+    margin-bottom:45px;
+}
+
+.title h2{
+    font-size:34px;
+    color:#00c6ff;
+    margin-bottom:10px;
+}
+
+.title p{
+    color:#8997ad;
+}
+
+/* SERVICES */
+.services{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:22px;
+}
+
+.card{
+    background:linear-gradient(145deg,#0c1931,#081020);
+    border:1px solid #172b4f;
+    border-radius:18px;
+    padding:30px 22px;
+    text-align:center;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    border-color:#00c6ff;
+    box-shadow:0 0 25px rgba(0,198,255,.15);
+}
+
+.icon{
+    width:65px;
+    height:65px;
+    margin:0 auto 20px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:50%;
+    background:#062b52;
+    color:#00c6ff;
+    font-size:28px;
+}
+
+.card h3{
+    margin-bottom:12px;
+}
+
+.card p{
+    color:#8997ad;
+    line-height:1.6;
+    font-size:14px;
+}
+
+/* ABOUT */
+.about-box{
+    max-width:850px;
+    margin:auto;
+    background:#0a1529;
+    border:1px solid #172b4f;
+    padding:35px;
+    border-radius:20px;
+    text-align:center;
+}
+
+.about-box p{
+    color:#aab5c8;
+    line-height:1.9;
+}
+
+/* CONTACT */
+.contact{
+    text-align:center;
+    background:linear-gradient(135deg,#062a52,#071226);
+    border-radius:25px;
+    padding:55px 20px;
+}
+
+.contact h2{
+    font-size:34px;
+    margin-bottom:15px;
+}
+
+.contact p{
+    color:#aab5c8;
+    margin-bottom:25px;
+}
+
+/* FOOTER */
+footer{
+    text-align:center;
+    padding:25px;
+    background:#020610;
+    color:#718097;
+    border-top:1px solid #14223b;
+}
+
+footer strong{
+    color:#00c6ff;
+}
+
+/* MOBILE */
+@media(max-width:700px){
+
+    header{
+        padding:15px 5%;
+    }
+
+    .logo{
+        font-size:17px;
+    }
+
+    nav a{
+        margin-left:8px;
+        font-size:12px;
+    }
+
+    .hero h1{
+        font-size:39px;
+    }
+
+    .hero h2{
+        font-size:20px;
+    }
+
+    section{
+        padding:70px 5%;
+    }
+
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">
+        OLA DEECEE
+    </div>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <div class="badge">
+            WELCOME TO OLA DEECEE LOGS
+        </div>
+
+        <h1>OLA DEECEE LOGS</h1>
+
+        <h2>Your Digital Service Partner</h2>
+
+        <p>
+            Discover convenient and reliable digital solutions
+            designed to make your online experience easier.
+        </p>
+
+        <a href="#services" class="btn">
+            Explore Services
+        </a>
+
+        <a href="#contact" class="btn btn-outline">
+            Contact Us
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- SERVICES -->
+
+<section id="services">
+
+    <div class="title">
+
+        <h2>Our Services</h2>
+
+        <p>
+            Explore our available digital services
+        </p>
+
+    </div>
+
+
+    <div class="services">
+
+        <div class="card">
+
+            <div class="icon">🌐</div>
+
+            <h3>Digital Services</h3>
+
+            <p>
+                Convenient online solutions for your digital needs.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="icon">📱</div>
+
+            <h3>Social Media</h3>
+
+            <p>
+                Assistance with legitimate social media-related services.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="icon">📈</div>
+
+            <h3>Account Growth</h3>
+
+            <p>
+                Legitimate promotion and growth solutions for online accounts.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="icon">💬</div>
+
+            <h3>Customer Support</h3>
+
+            <p>
+                Contact us for information about our available services.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section id="about">
+
+    <div class="title">
+
+        <h2>About OLA DEECEE</h2>
+
+    </div>
+
+    <div class="about-box">
+
+        <p>
+            OLA DEECEE LOGS is a digital service brand focused on
+            providing convenient, affordable and reliable online
+            solutions. Our goal is to provide professional service
+            while maintaining responsible and legitimate digital
+            practices.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+    <div class="contact">
+
+        <h2>Let's Connect</h2>
+
+        <p>
+            Have a question or want to make an enquiry?
+            Contact OLA DEECEE LOGS today.
+        </p>
+
+        <!-- Replace the number below with your WhatsApp number -->
+
+        <a
+            href="https://wa.me/2348021420108"
+            class="btn"
+            target="_blank">
+            💬 WhatsApp Us
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    © 2026 <strong>OLA DEECEE LOGS</strong>
+    — All Rights Reserved.
+
+</footer>
+
+</body>
+</html>
+<div class="services">
+<!-- WHY CHOOSE US -->
+
+<section>
+
+    <div class="title">
+        <h2>Why Choose Us?</h2>
+        <p>What makes OLA DEECEE LOGS different</p>
+    </div>
+
+    <div class="services">
+
+        <div class="card">
+            <div class="icon">⚡</div>
+            <h3>Fast Response</h3>
+            <p>
+                We aim to respond to customer enquiries quickly.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="icon">💎</div>
+            <h3>Quality Service</h3>
+            <p>
+                We focus on providing convenient and reliable digital solutions.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="icon">💰</div>
+            <h3>Affordable</h3>
+            <p>
+                Get competitive prices on our available services.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="icon">🤝</div>
+            <h3>Customer Focused</h3>
+            <p>
+                Our customers are important to us and we value good service.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+<!-- ORDER / ENQUIRY -->
+
+<section id="order">
+
+    <div class="title">
+        <h2>Make an Enquiry</h2>
+        <p>Tell us what service you are interested in</p>
+    </div>
+
+    <div class="about-box">
+
+        <form onsubmit="sendWhatsApp(); return false;">
+
+            <input
+                type="text"
+                id="customerName"
+                placeholder="Your Name"
+                required
+                style="width:100%; padding:15px; margin-bottom:15px; border-radius:10px; border:1px solid #243b60; background:#071226; color:white;"
+            >
+
+            <input
+                type="text"
+                id="service"
+                placeholder="Service you are interested in"
+                required
+                style="width:100%; padding:15px; margin-bottom:15px; border-radius:10px; border:1px solid #243b60; background:#071226; color:white;"
+            >
+
+            <textarea
+                id="message"
+                placeholder="Write your message"
+                rows="5"
+                required
+                style="width:100%; padding:15px; margin-bottom:15px; border-radius:10px; border:1px solid #243b60; background:#071226; color:white;"
+            ></textarea>
+
+            <button
+                type="submit"
+                class="btn"
+                style="border:none; cursor:pointer;">
+                📲 Send Enquiry
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+<script>
+
+function sendWhatsApp() {
+
+    const name = document.getElementById("customerName").value;
+    const service = document.getElementById("service").value;
+    const message = document.getElementById("message").value;
+
+    const phone = "2348021420108";
+
+    const text =
+        "Hello OLA DEECEE LOGS%0A%0A" +
+        "Name: " + encodeURIComponent(name) + "%0A" +
+        "Service: " + encodeURIComponent(service) + "%0A" +
+        "Message: " + encodeURIComponent(message);
+
+    window.open(
+        "https://wa.me/" + phone + "?text=" + text,
+        "_blank"
+    );
+}
+
+</script>
+<nav>
+    <a href="#home">Home</a>
+    <a href="#services">Services</a>
+    <a href="#about">About</a>
+    <a href="#order">Order Now</a>
+    <a href="#contact">Contact</a>
+</nav>
+</body>
+  <!-- FLOATING WHATSAPP BUTTON -->
+
+<a
+    href="https://wa.me/2348021420108"
+    target="_blank"
+    class="floating-whatsapp">
+    💬
+</a>
+
+<style>
+.floating-whatsapp {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    background: #25D366;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 28px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.35);
+    z-index: 9999;
+    transition: 0.3s;
+}
+
+.floating-whatsapp:hover {
+    transform: scale(1.1);
+}
+  </style>
+  <!-- SERVICES & PRICING -->
+
+<section id="pricing">
+
+    <div class="title">
+        <h2>Our Services & Prices</h2>
+        <p>Affordable digital services for our customers</p>
+    </div>
+
+    <div class="services">
+
+        <div class="card">
+            <div class="icon">📱</div>
+            <h3>Social Media Service</h3>
+            <p>Professional social media assistance.</p>
+            <h2>₦5,000</h2>
+            <a href="#order" class="btn">Order Now</a>
+        </div>
+
+        <div class="card">
+            <div class="icon">📈</div>
+            <h3>Account Promotion</h3>
+            <p>Legitimate account promotion and growth.</p>
+            <h2>₦10,000</h2>
+            <a href="#order" class="btn">Order Now</a>
+        </div>
+
+        <div class="card">
+            <div class="icon">🌐</div>
+            <h3>Digital Service</h3>
+            <p>Reliable online digital solutions.</p>
+            <h2>₦7,500</h2>
+            <a href="#order" class="btn">Order Now</a>
+        </div>
+
+        <div class="card">
+            <div class="icon">💎</div>
+            <h3>Premium Service</h3>
+            <p>Premium digital assistance and support.</p>
+            <h2>₦20,000</h2>
+            <a href="#order" class="btn">Order Now</a>
+        </div>
+
+    </div>
+
+</section>
+<!-- APP SERVICES -->
+
+<section id="apps">
+
+    <div class="title">
+        <h2>Available Platforms</h2>
+        <p>Digital services available for selected platforms</p>
+    </div>
+
+    <div class="services">
+
+        <div class="card">
+            <div class="icon">📘</div>
+            <h3>Facebook</h3>
+            <p>Facebook-related digital services.</p>
+        </div>
+
+        <div class="card">
+            <div class="icon">📸</div>
+            <h3>Instagram</h3>
+            <p>Instagram-related digital services.</p>
+        </div>
+
+        <div class="card">
+            <div class="icon">🐦</div>
+            <h3>X (Twitter)</h3>
+            <p>X-related digital services.</p>
+        </div>
+
+        <div class="card">
+            <div class="icon">✈️</div>
+            <h3>Telegram</h3>
+            <p>Telegram-related digital services.</p>
+        </div>
+
+        <div class="card">
+            <div class="icon">👻</div>
+            <h3>Snapchat</h3>
+            <p>Snapchat-related digital services.</p>
+        </div>
+
+        <div class="card">
+            <div class="icon">💬</div>
+            <h3>WhatsApp</h3>
+            <p>WhatsApp-related digital services.</p>
+        </div>
+
+        <div class="card">
+            <div class="icon">📞</div>
+            <h3>TextPlus</h3>
+            <p>Legitimate communication services.</p>
+        </div>
+
+        <div class="card">
+            <div class="icon">📲</div>
+            <h3>TextNow</h3>
+            <p>Legitimate communication services.</p>
+        </div>
+
+        <div class="card">
+            <div class="icon">🔐</div>
+            <h3>Signal</h3>
+            <p>Signal-related digital services.</p>
+        </div>
+
+        <div class="card">
+            <div class="icon">🧵</div>
+            <h3>Threads</h3>
+            <p>Threads-related digital services.</p>
+        </div>
+
+        <div class="card">
+            <div class="icon">📱</div>
+            <h3>Google Voice</h3>
+            <p>Legitimate communication services.</p>
+        </div>
+
+    </div>
+
+</section>
+<!-- MORE PLATFORMS -->
+
+<div class="card">
+    <div class="icon">🎵</div>
+    <h3>TikTok</h3>
+    <p>Digital services for TikTok.</p>
+</div>
+
+<div class="card">
+    <div class="icon">🎮</div>
+    <h3>Discord</h3>
+    <p>Digital services for Discord.</p>
+</div>
+
+<div class="card">
+    <div class="icon">▶️</div>
+    <h3>YouTube</h3>
+    <p>Digital services for YouTube.</p>
+</div>
+
+<div class="card">
+    <div class="icon">💼</div>
+    <h3>LinkedIn</h3>
+    <p>Digital services for LinkedIn.</p>
+</div>
+
+<div class="card">
+    <div class="icon">📌</div>
+    <h3>Pinterest</h3>
+    <p>Digital services for Pinterest.</p>
+</div>
+
+<div class="card">
+    <div class="icon">🔴</div>
+    <h3>Reddit</h3>
+    <p>Digital services for Reddit.</p>
+</div>
+
+<div class="card">
+    <div class="icon">💙</div>
+    <h3>Bluesky</h3>
+    <p>Digital services for Bluesky.</p>
+</div>
+
+<div class="card">
+    <div class="icon">🎥</div>
+    <h3>Twitch</h3>
+    <p>Digital services for Twitch.</p>
+</div>
+
+<div class="card">
+    <div class="icon">📞</div>
+    <h3>Skype</h3>
+    <p>Digital communication services.</p>
+</div>
+
+<div class="card">
+    <div class="icon">💚</div>
+    <h3>Viber</h3>
+    <p>Digital communication services.</p>
+</div>
+
+<div class="card">
+    <div class="icon">💬</div>
+    <h3>LINE</h3>
+    <p>Digital communication services.</p>
+</div>
+
+<div class="card">
+    <div class="icon">🌐</div>
+    <h3>WeChat</h3>
+    <p>Digital communication services.</p>
+</div>
+<!-- MORE PLATFORMS WITH PRICES -->
+
+<div class="card">
+    <div class="icon">🎵</div>
+    <h3>TikTok</h3>
+    <p>Digital services for TikTok.</p>
+    <h2>₦5,000</h2>
+    <a href="#order" class="btn">Order Now</a>
+</div>
+
+<div class="card">
+    <div class="icon">🎮</div>
+    <h3>Discord</h3>
+    <p>Digital services for Discord.</p>
+    <h2>₦5,000</h2>
+    <a href="#order" class="btn">Order Now</a>
+</div>
+
+<div class="card">
+    <div class="icon">▶️</div>
+    <h3>YouTube</h3>
+    <p>Digital services for YouTube.</p>
+    <h2>₦7,500</h2>
+    <a href="#order" class="btn">Order Now</a>
+</div>
+
+<div class="card">
+    <div class="icon">💼</div>
+    <h3>LinkedIn</h3>
+    <p>Digital services for LinkedIn.</p>
+    <h2>₦10,000</h2>
+    <a href="#order" class="btn">Order Now</a>
+</div>
+
+<div class="card">
+    <div class="icon">📌</div>
+    <h3>Pinterest</h3>
+    <p>Digital services for Pinterest.</p>
+    <h2>₦5,000</h2>
+    <a href="#order" class="btn">Order Now</a>
+</div>
+
+<div class="card">
+    <div class="icon">🔴</div>
+    <h3>Reddit</h3>
+    <p>Digital services for Reddit.</p>
+    <h2>₦5,000</h2>
+    <a href="#order" class="btn">Order Now</a>
+</div>
+
+<div class="card">
+    <div class="icon">💙</div>
+    <h3>Bluesky</h3>
+    <p>Digital services for Bluesky.</p>
+    <h2>₦5,000</h2>
+    <a href="#order" class="btn">Order Now</a>
+</div>
+
+<div class="card">
+    <div class="icon">🎥</div>
+    <h3>Twitch</h3>
+    <p>Digital services for Twitch.</p>
+    <h2>₦7,500</h2>
+    <a href="#order" class="btn">Order Now</a>
+</div>
+
+<div class="card">
+    <div class="icon">📞</div>
+    <h3>Skype</h3>
+    <p>Digital communication services.</p>
+    <h2>₦5,000</h2>
+    <a href="#order" class="btn">Order Now</a>
+</div>
+
+<div class="card">
+    <div class="icon">💚</div>
+    <h3>Viber</h3>
+    <p>Digital communication services.</p>
+    <h2>₦5,000</h2>
+    <a href="#order" class="btn">Order Now</a>
+</div>
+
+<div class="card">
+    <div class="icon">💬</div>
+    <h3>LINE</h3>
+    <p>Digital communication services.</p>
+    <h2>₦5,000</h2>
+    <a href="#order" class="btn">Order Now</a>
+</div>
+
+<div class="card">
+    <div class="icon">🌐</div>
+    <h3>WeChat</h3>
+    <p>Digital communication services.</p>
+    <h2>₦7,500</h2>
+    <a href="#order" class="btn">Order Now</a>
+</div>
+<!-- HOW IT WORKS -->
+
+<section id="how-it-works">
+
+    <div class="title">
+        <h2>How It Works</h2>
+        <p>Getting started with OLA DEECEE LOGS is simple</p>
+    </div>
+
+    <div class="services">
+
+        <div class="card">
+            <div class="icon">1️⃣</div>
+            <h3>Choose a Service</h3>
+            <p>
+                Browse our available services and choose the one
+                that meets your needs.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="icon">2️⃣</div>
+            <h3>Make an Enquiry</h3>
+            <p>
+                Tell us what service you are interested in using
+                our enquiry form.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="icon">3️⃣</div>
+            <h3>Get a Response</h3>
+            <p>
+                Our team will respond with the available options,
+                details and current price.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="icon">4️⃣</div>
+            <h3>Get Started</h3>
+            <p>
+                Once everything is confirmed, we can proceed with
+                the requested legitimate service.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+https://t.me/oladeecee
+  <!-- TELEGRAM CONTACT -->
+
+<section id="telegram">
+
+    <div class="contact">
+
+        <h2>Message Us on Telegram</h2>
+
+        <p>
+            Have a question or want to make an enquiry?
+            Send us a message on Telegram.
+        </p>
+
+        <a
+            href="https://t.me/YOUR_TELEGRAM_USERNAME"
+            target="_blank"
+            class="btn telegram-btn">
+            ✈️ Message Us on Telegram
+        </a>
+
+    </div>
+
+</section>
+
+<style>
+
+.telegram-btn{
+    background:#229ED9;
+    box-shadow:0 0 20px rgba(34,158,217,.35);
+}
+
+.telegram-btn:hover{
+    background:#168ac0;
+}
+
+</style>
+<!-- EMAIL CONTACT -->
+
+<section id="email">
+
+    <div class="contact">
+
+        <h2>Contact Us by Email</h2>
+
+        <p>
+            Have a question or need more information?
+            Send us an email and we'll get back to you.
+        </p>
+
+        <a
+            href="mailto:abdulkhalidaroyewun@gmail.com?subject=OLA%20DEECEE%20LOGS%20Enquiry"
+            class="btn email-btn">
+            ✉️ Email Us
+        </a>
+
+    </div>
+
+</section>
+
+<style>
+
+.email-btn{
+    background:#005bea;
+    box-shadow:0 0 20px rgba(0,91,234,.35);
+}
+
+.email-btn:hover{
+    background:#003f9e;
+}
+
+</style>
+<!-- QUICK LINKS -->
+
+<section id="quick-links">
+
+    <div class="title">
+        <h2>Quick Links</h2>
+        <p>Find what you need quickly</p>
+    </div>
+
+    <div class="services">
+
+        <div class="card">
+            <div class="icon">🏠</div>
+            <h3>Home</h3>
+            <p>Return to the homepage.</p>
+            <a href="#home" class="btn">Visit</a>
+        </div>
+
+        <div class="card">
+            <div class="icon">🛍️</div>
+            <h3>Marketplace</h3>
+            <p>Browse our available products and services.</p>
+            <a href="#marketplace" class="btn">Browse</a>
+        </div>
+
+        <div class="card">
+            <div class="icon">📦</div>
+            <h3>Products</h3>
+            <p>View available products and prices.</p>
+            <a href="#products" class="btn">View Products</a>
+        </div>
+
+        <div class="card">
+            <div class="icon">💰</div>
+            <h3>Pricing</h3>
+            <p>Check our available packages.</p>
+            <a href="#pricing" class="btn">View Pricing</a>
+        </div>
+
+        <div class="card">
+            <div class="icon">🛒</div>
+            <h3>Cart</h3>
+            <p>Review the services you selected.</p>
+            <a href="#cart" class="btn">View Cart</a>
+        </div>
+
+        <div class="card">
+            <div class="icon">📝</div>
+            <h3>Order</h3>
+            <p>Send us an enquiry about a service.</p>
+            <a href="#order" class="btn">Order Now</a>
+        </div>
+
+        <div class="card">
+            <div class="icon">💬</div>
+            <h3>WhatsApp</h3>
+            <p>Chat with us directly on WhatsApp.</p>
+            <a
+                href="https://wa.me/234XXXXXXXXXX"
+                target="_blank"
+                class="btn">
+                WhatsApp
+            </a>
+        </div>
+
+        <div class="card">
+            <div class="icon">✈️</div>
+            <h3>Telegram</h3>
+            <p>Send us a message on Telegram.</p>
+            <a
+                href="https://t.me/YOUR_TELEGRAM_USERNAME"
+                target="_blank"
+                class="btn">
+                Telegram
+            </a>
+        </div>
+
+        <div class="card">
+            <div class="icon">✉️</div>
+            <h3>Email</h3>
+            <p>Contact us by email.</p>
+            <a
+                href="mailto:abdulkhalidaroyewun@gmail.com"
+                class="btn">
+                Email Us
+            </a>
+        </div>
+
+    </div>
+
+</section>
+<!-- COPYRIGHT FOOTER -->
+
+<footer class="site-footer">
+
+    <div class="footer-logo">
+        OLA DEECEE LOGS
+    </div>
+
+    <p>
+        © 2026 OLA DEECEE LOGS. All Rights Reserved.
+    </p>
+
+    <div class="footer-links">
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#products">Products</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#contact">Contact</a>
+    </div>
+
+</footer>
+
+<style>
+
+.site-footer{
+    text-align:center;
+    padding:35px 20px;
+    background:#020610;
+    border-top:1px solid #19345a;
+    color:#8997ad;
+}
+
+.footer-logo{
+    font-size:20px;
+    font-weight:bold;
+    color:#00c6ff;
+    margin-bottom:12px;
+    letter-spacing:1px;
+}
+
+.site-footer p{
+    margin-bottom:18px;
+}
+
+.footer-links{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:18px;
+}
+
+.footer-links a{
+    color:#b9c4d8;
+    text-decoration:none;
+    font-size:14px;
+}
+
+.footer-links a:hover{
+    color:#00c6ff;
+}
+
+</style>
+  <!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>OLA DEECEE LOGS | Terms & Conditions</title>
+
+<style>
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#050b18;
+    color:#dce6f5;
+    line-height:1.7;
+}
+
+header{
+    background:linear-gradient(135deg,#005bea,#00c6fb);
+    padding:30px 20px;
+    text-align:center;
+}
+
+header h1{
+    font-size:30px;
+    color:white;
+}
+
+header p{
+    margin-top:8px;
+    color:white;
+}
+
+.container{
+    max-width:900px;
+    margin:auto;
+    padding:40px 20px;
+}
+
+.terms-box{
+    background:#0a1529;
+    border:1px solid #19345a;
+    border-radius:18px;
+    padding:30px;
+    box-shadow:0 5px 25px rgba(0,0,0,.25);
+}
+
+h2{
+    color:#00c6ff;
+    margin-top:30px;
+    margin-bottom:10px;
+}
+
+h2:first-child{
+    margin-top:0;
+}
+
+p{
+    color:#b9c4d8;
+    margin-bottom:15px;
+}
+
+ul{
+    margin:10px 0 20px 25px;
+    color:#b9c4d8;
+}
+
+li{
+    margin-bottom:8px;
+}
+
+.updated{
+    color:#7f91aa;
+    font-size:13px;
+    margin-bottom:25px;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:25px;
+    padding:13px 22px;
+    background:#0077ff;
+    color:white;
+    text-decoration:none;
+    border-radius:25px;
+}
+
+footer{
+    text-align:center;
+    padding:25px;
+    margin-top:30px;
+    background:#020610;
+    border-top:1px solid #19345a;
+    color:#7f91aa;
+}
+
+footer strong{
+    color:#00c6ff;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+    <h1>OLA DEECEE LOGS</h1>
+
+    <p>Terms & Conditions</p>
+
+</header>
+
+
+<div class="container">
+
+<div class="terms-box">
+
+    <p class="updated">
+        Last Updated: August 17, 2026
+    </p>
+
+
+    <h2>1. Introduction</h2>
+
+    <p>
+        Welcome to OLA DEECEE LOGS. By accessing or using
+        this website, you agree to these Terms & Conditions.
+        If you do not agree with these terms, please do not
+        use the website.
+    </p>
+
+
+    <h2>2. Our Services</h2>
+
+    <p>
+        OLA DEECEE LOGS provides digital products and services
+        as described on our website. Availability, pricing and
+        service details may change without notice.
+    </p>
+
+
+    <h2>3. Customer Responsibility</h2>
+
+    <p>
+        Customers are responsible for providing accurate
+        information when making an enquiry or placing an order.
+    </p>
+
+    <ul>
+        <li>Do not provide false information.</li>
+        <li>Do not use our services for unlawful activities.</li>
+        <li>Do not attempt to abuse or misuse our services.</li>
+        <li>Use all digital services responsibly.</li>
+    </ul>
+
+
+    <h2>4. Payments</h2>
+
+    <p>
+        Prices displayed on the website may change. Customers
+        should confirm the current price and availability before
+        making payment.
+    </p>
+
+
+    <h2>5. Refunds</h2>
+
+    <p>
+        Refund eligibility depends on the specific service or
+        product purchased. Customers should contact OLA DEECEE
+        LOGS as soon as possible if there is a problem with an
+        order.
+    </p>
+
+
+    <h2>6. Prohibited Use</h2>
+
+    <p>
+        Our website and services must not be used for fraud,
+        impersonation, unauthorized access, harassment, scams,
+        or any other unlawful activity.
+    </p>
+
+
+    <h2>7. Account and Platform Rules</h2>
+
+    <p>
+        Customers must comply with the terms and policies of
+        third-party platforms when using services related to
+        those platforms.
+    </p>
+
+
+    <h2>8. Availability</h2>
+
+    <p>
+        We do not guarantee that every product or service will
+        always be available. Some services may depend on
+        third-party platforms, geographic availability or other
+        external factors.
+    </p>
+
+
+    <h2>9. Website Content</h2>
+
+    <p>
+        We make reasonable efforts to keep information on this
+        website accurate, but prices, descriptions and
+        availability may change.
+    </p>
+
+
+    <h2>10. Privacy</h2>
+
+    <p>
+        Information submitted through our website should be
+        handled according to our Privacy Policy.
+    </p>
+
+
+    <h2>11. Changes to These Terms</h2>
+
+    <p>
+        OLA DEECEE LOGS may update these Terms & Conditions
+        from time to time. Updated terms will be posted on this
+        page.
+    </p>
+
+
+    <h2>12. Contact Us</h2>
+
+    <p>
+        If you have questions about these Terms & Conditions,
+        contact us at:
+    </p>
+
+    <p>
+        <strong>
+            abdulkhalidaroyewun@gmail.com
+        </strong>
+    </p>
+
+
+    <a href="index.html" class="btn">
+        ← Back to Website
+    </a>
+
+</div>
+
+</div>
+
+
+<footer>
+
+    © 2026
+    <strong>OLA DEECEE LOGS</strong>
+    — All Rights Reserved.
+
+</footer>
+
+</body>
+
+</html>
+<a href="terms.html">Terms & Conditions</a>

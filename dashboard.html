@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>OLA DEECEE LOGS | Dashboard</title>
+
+<style>
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#f3f7fc;
+    color:#172033;
+}
+
+header{
+    background:linear-gradient(135deg,#005bea,#00c6fb);
+    color:white;
+    padding:22px;
+    text-align:center;
+}
+
+header h1{
+    font-size:25px;
+}
+
+.container{
+    max-width:1100px;
+    margin:auto;
+    padding:25px;
+}
+
+.dashboard{
+    display:grid;
+    grid-template-columns:280px 1fr;
+    gap:25px;
+}
+
+.sidebar{
+    background:#07152d;
+    color:white;
+    border-radius:15px;
+    padding:25px;
+    min-height:500px;
+}
+
+.sidebar h2{
+    color:#00c6ff;
+    margin-bottom:25px;
+}
+
+.sidebar p{
+    padding:13px 0;
+    border-bottom:1px solid #1c3152;
+}
+
+.main{
+    background:white;
+    border-radius:15px;
+    padding:25px;
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+}
+
+.title{
+    margin-bottom:25px;
+}
+
+.title h2{
+    color:#005bea;
+    margin-bottom:8px;
+}
+
+.form{
+    display:grid;
+    gap:15px;
+    margin-bottom:35px;
+}
+
+input,
+textarea,
+select{
+    width:100%;
+    padding:14px;
+    border:1px solid #ccd7e6;
+    border-radius:10px;
+    outline:none;
+    font-size:15px;
+}
+
+textarea{
+    min-height:100px;
+    resize:vertical;
+}
+
+button{
+    border:0;
+    padding:14px 20px;
+    border-radius:10px;
+    background:#005bea;
+    color:white;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#003f9e;
+}
+
+.products{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:18px;
+}
+
+.product{
+    border:1px solid #dce5f0;
+    border-radius:14px;
+    padding:20px;
+}
+
+.product h3{
+    color:#005bea;
+    margin-bottom:10px;
+}
+
+.price{
+    font-size:20px;
+    font-weight:bold;
+    margin:12px 0;
+}
+
+.delete{
+    background:#e53935;
+    margin-top:10px;
+}
+
+.empty{
+    color:#777;
+    padding:20px 0;
+}
+
+@media(max-width:750px){
+
+    .dashboard{
+        grid-template-columns:1fr;
+    }
+
+    .sidebar{
+        min-height:auto;
+    }
+
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>OLA DEECEE LOGS</h1>
+    <p>Seller Dashboard</p>
+</header>
+
+<div class="container">
+
+    <div class="dashboard">
+
+        <aside class="sidebar">
+
+            <h2>Dashboard</h2>
+
+            <p>📊 Overview</p>
+            <p>📦 Products</p>
+            <p>💰 Pricing</p>
+            <p>🛒 Orders</p>
+            <p>⚙️ Settings</p>
+
+        </aside>
+
+        <main class="main">
+
+            <div class="title">
+                <h2>Add New Product</h2>
+                <p>Add legitimate digital products or services to your marketplace.</p>
+            </div>
+
+            <div class="form">
+
+                <input
+                    type="text"
+                    id="productName"
+                    placeholder="Product / Service Name"
+                >
+
+                <select id="category">
+
+                    <option value="">
+                        Select Category
+                    </option>
+
+                    <option>
+                        Digital Services
+                    </option>
+
+                    <option>
+                        Social Media Services
+                    </option>
+
+                    <option>
+                        Digital Numbers
+                    </option>
+
+                    <option>
+                        Account Promotion
+                    </option>
+
+                    <option>
+                        Other
+                    </option>
+
+                </select>
+
+                <input
+                    type="number"
+                    id="productPrice"
+                    placeholder="Price in ₦"
+                >
+
+                <textarea
+                    id="productDescription"
+                    placeholder="Product description"
+                ></textarea>
+
+                <button onclick="addProduct()">
+                    + Add Product
+                </button>
+
+            </div>
+
+            <div class="title">
+                <h2>My Products</h2>
+            </div>
+
+            <div id="products" class="products"></div>
+
+        </main>
+
+    </div>
+
+</div>
+
+<script>
+
+let products =
+    JSON.parse(localStorage.getItem("olaProducts")) || [];
+
+function saveProducts(){
+
+    localStorage.setItem(
+        "olaProducts",
+        JSON.stringify(products)
+    );
+
+}
+
+function addProduct(){
+
+    const name =
+        document.getElementById("productName").value.trim();
+
+    const category =
+        document.getElementById("category").value;
+
+    const price =
+        document.getElementById("productPrice").value;
+
+    const description =
+        document.getElementById("productDescription").value.trim();
+
+    if(!name || !category || !price || !description){
+
+        alert("Please fill in all fields.");
+
+        return;
+    }
+
+    const product = {
+
+        id: Date.now(),
+
+        name: name,
+
+        category: category,
+
+        price: price,
+
+        description: description
+
+    };
+
+    products.push(product);
+
+    saveProducts();
+
+    displayProducts();
+
+    document.getElementById("productName").value = "";
+    document.getElementById("category").value = "";
+    document.getElementById("productPrice").value = "";
+    document.getElementById("productDescription").value = "";
+
+}
+
+function deleteProduct(id){
+
+    products =
+        products.filter(product => product.id !== id);
+
+    saveProducts();
+
+    displayProducts();
+
+}
+
+function displayProducts(){
+
+    const container =
+        document.getElementById("products");
+
+    container.innerHTML = "";
+
+    if(products.length === 0){
+
+        container.innerHTML =
+            '<p class="empty">No products added yet.</p>';
+
+        return;
+
+    }
+
+    products.forEach(product => {
+
+        const card =
+            document.createElement("div");
+
+        card.className = "product";
+
+        card.innerHTML = `
+
+            <h3>${escapeHTML(product.name)}</h3>
+
+            <small>
+                ${escapeHTML(product.category)}
+            </small>
+
+            <div class="price">
+                ₦${Number(product.price).toLocaleString()}
+            </div>
+
+            <p>
+                ${escapeHTML(product.description)}
+            </p>
+
+            <button
+                class="delete"
+                onclick="deleteProduct(${product.id})">
+                Delete
+            </button>
+
+        `;
+
+        container.appendChild(card);
+
+    });
+
+}
+
+function escapeHTML(text){
+
+    const div =
+        document.createElement("div");
+
+    div.textContent = text;
+
+    return div.innerHTML;
+
+
+
+
+</script>
+
+</body>
